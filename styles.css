@@ -1,0 +1,75 @@
+/* Estilos para la barra de navegacion superior */
+nav {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile-info img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.user-info {
+	display: flex;
+	justify-content: flex-end;
+	/*align-items: center; */
+	text-align: left;
+	margin-right: 20px;
+}
+
+.image-container {
+	max-width: 715px;
+	margin: 0 auto;
+}
+
+/* Additional styles for image grid */
+.image-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* Distribute items evenly */
+}
+
+.image-grid img {
+	width: 235px; /* Set width to 30% of the container width */
+	height: 235px;
+	object-fit: cover;
+	border-radius: 2px;
+	margin: 1px;
+}
+
+/* Styles for the "Change Profile Picture" button */
+#change-profile-btn {
+	cursor: pointer;
+	text-decoration: underline;
+	transition: color 0.3s ease;
+}
+
+#change-profile-btn:hover {
+	color: #666;
+}
+
+/* Styles fot the "Add Images" button */
+#add-image-btn {
+	cursor: pointer;
+	text-decoration: underline;
+	transition: color 0.3s ease;
+}
+
+#add-image-btn:hover {
+	color: #666;
+}
+
+@font-face {
+	font-family: 'MyFont';
+	src: url('\fonts\Instagram Sans.ttf') format('truetype');
+}
+
+/* Estilos adicionales */
+body {
+	font-family: 'MyFont', 'Instagram-Sans', sans-serif;
+}

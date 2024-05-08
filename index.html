@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Feed de Instagram</title>
+    <title>User profile - Instragram simulator</title>
     <!-- Enlace a archivos CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Simulador de Feed de Instagram</h1>
+        <div class="profile-info">
+			<img id="profile-image" src="images\profile-picture.jpg" alt="Profile Picture">
+			<div class="user-info">
+				<h2>Galo Orellana</h2>
+				<form id="profile-upload-form" enctype="multipart/form-data">
+					<!-- Hide the file input -->
+					<input type="file" id="profile-input" name="profile" accept="image/*" style="display: none;">
+					<!-- Change Profile Picture button -->
+					<label for="profile-input" id="change-profile-btn">Change Profile Picture</label>
+				</form>
+				<p>Bio: Lorem ipsum dolor sit amet, consectetus adipiscing elit.</p>
+			</div>
+		</div>
     </header>
     <main>
-        <!-- Formulario para subir imagenes -->
-        <form id="image-upload-form" enctype="multipart/form-data">
-            <input type="file" id="image-input" name="image" accept="image/*" multiple>
-            <button type="submit">Subir Imagenes</button>
-        </form>
-        <!-- Contenedor para mostrar las imagenes subidas -->
-        <div id="image-preview-container"></div>
-        <!-- Contenedor para simular el feed de Instagram -->
-        <div id="instagram-feed"></div>
+		<form id="image-upload-form" enctype="multipart/form-data">
+			<!-- Hide the file input -->
+			<input type="file" id="image-input" name="image" accept="image/*" multiple style="display: none;">
+			<!-- Add Images button -->
+			<label for="image-input" id="add-image-btn">Add Images</label>
+		</form>
+		<div class="image-container">
+			<div class="image-grid">
+				<!-- Images will be dinamically added here -->
+			</div>
+		</div>	
     </main>
     <footer>
-        <p>&copy; 2024 Tu Nombre</p>
+        <p>&copy; 2024 Galo Ignacio Orellana</p>
     </footer>
     <!-- Scripts JavaScript -->
     <script src="script.js"></script>
