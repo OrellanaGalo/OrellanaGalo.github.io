@@ -9,35 +9,54 @@
 </head>
 <body>
     <header>
-        <div class="profile-info">
-			<img id="profile-image" src="images\profile-picture.jpg" alt="Profile Picture">
-			<div class="user-info">
-				<h2>Galo Orellana</h2>
-				<form id="profile-upload-form" enctype="multipart/form-data">
-					<!-- Hide the file input -->
-					<input type="file" id="profile-input" name="profile" accept="image/*" style="display: none;">
-					<!-- Change Profile Picture button -->
-					<label for="profile-input" id="change-profile-btn">Change Profile Picture</label>
-				</form>
-				<p>Bio: Lorem ipsum dolor sit amet, consectetus adipiscing elit.</p>
+        <div class="container">
+			<div class="profile">
+				<img id="profile-image" src="images\profile-picture.jpg" alt="Profile Picture">
+			</div>
+			<div class="profile-user-settings">
+				<h1 class="profile-user-name">Galo Orellana</h1>
+				<input type="file" id="profile-input" name="image" accept="image/*" style="display: none;">
+				<button class="btn profile-edit-btn" id="change-profile-btn">Change Profile Picture</button>
+			</div>
+			<div class="profile-stats">
+				<ul>
+					<li><span class="profile-stat-count">164</span> posts</li>
+					<li><span class="profile-stat-count">188</span> followers</li>
+					<li><span class="profile-stat-count">206</span> following</li>
+				</ul>
+			</div>
+			<div class="profile-bio">
+				<p><span class="profile-real-name">Galo Orellana</span> Bio: Lorem ipsum dolor sit amet, consectetus adipiscing elit 📷✈️🏕️</p>
 			</div>
 		</div>
-    </header>
-    <main>
-		<form id="image-upload-form" enctype="multipart/form-data">
-			<!-- Hide the file input -->
-			<input type="file" id="image-input" name="image" accept="image/*" multiple style="display: none;">
-			<!-- Add Images button -->
-			<label for="image-input" id="add-image-btn">Add Images</label>
-		</form>
-		<div class="image-container">
-			<div class="image-grid">
-				<!-- Images will be dinamically added here -->
+		<!-- End of profile section -->
+	</div>
+	<!-- End of container -->
+	</header>
+	<main>
+		<div class="container">
+			<div class="gallery">
+				<form id="image-upload-form" enctype="multipart/form-data">
+					<!-- Hide the file input -->
+					<input type="file" id="image-input" name="image" accept="image/*" multiple style="display: none;">
+					<!-- Add Images button -->
+					<label for="image-input" id="add-image-btn">Add Images</label>
+				</form>
+				<div class="gallery-items">
+					<!-- Images will be dynamically added here -->
+					<div class="gallery-row"></div>
+				</div>
 			</div>
-		</div>	
-    </main>
+			<!-- End of gallery -->
+			<div class="loader"></div>
+		</div>
+		<!-- End of container -->
+	</main>
     <footer>
-        <p>&copy; 2024 Galo Ignacio Orellana</p>
+		<div class="container">
+			<p>&copy; 2024 Galo Ignacio Orellana</p>
+		</div>
+		<!-- End of container -->
     </footer>
     <!-- Scripts JavaScript -->
     <script src="script.js"></script>
